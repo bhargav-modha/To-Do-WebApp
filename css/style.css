@@ -1,0 +1,59 @@
+.sidebar {
+    padding: 1.5em 1.5em;
+    min-height: 100vh;
+    display: grid;
+    align-items: stretch;
+    background-color: var(--secondary);
+    color: #fff !important;
+    position: sticky;
+}
+
+.todo {
+    margin: 1em 0em;
+    overflow-y: auto;
+}
+
+.container {
+    margin: 0;
+}
+
+.close::before,
+.close:hover::before,
+.close:focus::before,
+.close:active::before {
+    color: #fff !important;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 1.5em;
+    line-height: 1;
+    right: 25px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=checkbox]:checked+h3 {
+    text-decoration: line-through;
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+.checkbox:checked~div {
+    text-decoration: line-through;
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+div.card.text-left:hover {
+    background-color: #ddd;
+}
+
+#contentId {
+    position: fixed;
+    z-index: 1000;
+    background-color: #fff;
+    right: 0px;
+    filter: opacity(0.9);
+    min-width: 40vw;
+}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css"
+        integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Practical 10</title>
+</head>
+
+<body class="container-fluid">
+    <div class="row">
+        <div class="col-3 sidebar">
+            <div class="row title">
+                <div class="col-12">
+                    <h1 class="text-center title">To-do Web app</h1>
+                </div>
+            </div>
+            <div class="row tasks-list">
+                <div class="col-12">
+                    <ul id="list_item" class="list-unstyled">
+                    </ul>
+                </div>
+            </div>
+            <div class="row submit">
+                <div class="col-7">
+                    <input type="text" class="form-control" name="" id="itemname" placeholder="">
+                </div>
+                <div class="col-5">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Submit" onclick="add_item()">
+                </div>
+            </div>
+        </div>
+        <div class="col-9 todo">
+            <div class="row">
+                <div class="col-4">
+                    <h1 id="category">Home</h1>
+                </div>
+                <div class="col-8">
+                    <p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#contentId"
+                            aria-expanded="false" aria-controls="contentId" id="newtaskbtn">
+                            New Task
+                        </button>
+                        <button class="btn btn-primary" type="button" id="save">
+                            Save tasks
+                        </button>
+                        <button class="btn btn-primary" type="button" id="clear" onclick="Clear()">
+                            Clear screen
+                        </button>
+                        <button class="btn btn-primary" type="button" id="read">
+                            Fetch Older tasks
+                        </button>
+                        <button class="btn btn-primary" type="button" id="reset">
+                            Reset All
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="collapse" id="contentId">
+                        <div class="jumbotron">
+                            <h1 class="display-5">Create a new task</h1>
+                            <hr class="my-2">
+                            <div class="form-group form-row">
+                                <div class="form-group col-sm-6">
+                                    <input type="text" class="form-control" name="Task-name" id="TaskName"
+                                        placeholder="Title">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <select class="form-control" id="Topic" class="custom-select">
+                                        <option value="none" selected disabled>
+                                            Select Main Category of Task
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group form-row">
+                                <div class="form-group col-sm-6">
+                                    <input type="date" class="form-control" id="DueDate" placeholder="DueDate">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <select class="form-control" id="Priority" class="custom-select"
+                                        aria-placeholder="Priority">
+                                        <option value="high">High</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="low">Low</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group form-row">
+                                <div class="form-group col-sm-12">
+                                    <div class="form-group">
+                                        <label for="description"></label>
+                                        <textarea class="form-control" name="DescriptionBox" id="DescriptionBox"
+                                            rows="3" placeholder="Description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="submit" class="btn btn-primary btn-lg" role="button" onclick="addTask()"
+                                value="Create"></input>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <ul id="task-list" class="bg-primary list-unstyled">
+                        <li>
+                            <div class="card text-left" data-toggle="collapse" href="#collapse1" style="cursor:pointer">
+                                <div class="card-body m-2">
+                                    <input type="checkbox" class="checkbox">
+                                    <h3 class="card-title d-inline" class="title">Title</h3>
+                                    <div class="panel-group">
+                                        <div id="collapse1" class="panel-collapse collapse">
+                                            <div class="panel-body lead">
+                                                <span class="badge-lg badge-pill badge-primary">category</span>
+                                                <div class="date">Due Date</div>
+                                                <div class="priority">Priority</div>
+                                                <div class="desc">Description</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src=" https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "
+        integrity=" sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV "
+        crossorigin=" anonymous "></script>
+</body>
+
+</html>
